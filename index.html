@@ -80,6 +80,11 @@
       height: auto;
       min-width: 300px; /* Set a minimum width for the image */
     }
+
+    .dataset-image {
+      width: auto;
+      height: 100px;
+    }
   
     @media (max-width: 768px) {
       .methodology-image {
@@ -100,6 +105,14 @@
       text-align: left; /* Align list text to the left */
       margin: 0 auto; /* Center the list */
       padding-left: 1.5em; /* Add padding to align with list style */
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px; /* Adjust the gap between images */
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -206,8 +219,13 @@
         <p class="methodology-list">
           Parsed from <a href="https://jrdb.erc.monash.edu" target="_blank">JRDB dataset</a>, which is acquired from a mobile robot on campus. (RGB+LiDAR)
         </p>
-        <img class="methodology-image" src="static/images/OutMerged_Huang_lane_0_150_comp.gif" alt="MY ALT TEXT"/>
-        <img class="methodology-image" src="static/images/OutMerged_jordan_hall_0_150_comp.gif" alt="MY ALT TEXT"/>
+        <div class="image-row">
+          <img class="dataset-image" src="static/images/jordan_hall_frames_1100_1200_rgb.gif" alt="MY ALT TEXT"/>
+          <img class="dataset-image" src="static/images/jordan_hall_frames_1100_1200_pose.gif" alt="Another Image"/>
+        </div>
+        <!-- <img class="methodology-image" src="static/images/OutMerged_Huang_lane_0_150_comp.gif" alt="MY ALT TEXT"/>
+        <img class="methodology-image" src="static/images/OutMerged_jordan_hall_0_150_comp.gif" alt="MY ALT TEXT"/> -->
+
       </div>
     </div>
   </section>
