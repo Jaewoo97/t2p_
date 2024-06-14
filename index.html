@@ -74,6 +74,33 @@
         font-size: 23px; /* Adjusted font size for mobile */
       }
     }
+    
+    .methodology-image {
+      width: 85%;
+      height: auto;
+      min-width: 300px; /* Set a minimum width for the image */
+    }
+  
+    @media (max-width: 768px) {
+      .methodology-image {
+        width: 85%; /* Maintain width on mobile */
+      }
+  
+      .methodology-list {
+        max-width: 85%; /* Ensure the list aligns with the image width */
+        margin: 0 auto; /* Center the list */
+      }
+    }
+  
+    .methodology-section .container {
+      text-align: center;
+    }
+  
+    .methodology-list {
+      text-align: left; /* Align list text to the left */
+      margin: 0 auto; /* Center the list */
+      padding-left: 1.5em; /* Add padding to align with list style */
+    }
   </style>
 </head>
 <body>
@@ -162,8 +189,8 @@
     <div class="hero-body">
       <div class="container">
         <h2 class="title is-3">Methodology</h2>
-        <img src="static/images/figure_2.PNG" alt="MY ALT TEXT" style="width: 85%; height: auto;"/>
-        <ul style="text-align: left; list-style-type: disc;">
+        <img class="methodology-image" src="static/images/figure_2.PNG" alt="MY ALT TEXT"/>
+        <ul class="methodology-list">
           <li>Coarse global trajectories are forecasted from past motion (trajectory + pose)</li>
           <li>Fine local motion forecasted with conditioning on predicted future trajectory</li>
           <li>Complementary forecasting of <strong>Global</strong> and <strong>Local</strong> motion yields comprehensive proficiency.</li>
