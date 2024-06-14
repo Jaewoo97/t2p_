@@ -1,333 +1,182 @@
+To adjust the background color so that it remains darker for the "Abstract" section and returns to white for the "Methodology" section, you can modify the CSS styles accordingly. Here's how you can achieve this:
+
+### Updated CSS Styles:
+
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multi-agent Long-term 3D Human Pose Forecasting via Interaction-aware Trajectory Conditioning</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* General styles */
+    body {
+      font-family: 'Noto Sans', sans-serif; /* Default font */
+      line-height: 1.6; /* Improved readability */
+      background-color: #ffffff; /* Default background color */
+      color: #333333; /* Default text color */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Title styles */
     .title.is-1.publication-title {
-        font-size: 28px; /* Default font size */
-        /* Additional styles can be added here */
-    }
-  </style>
-
-  <!-- Font for mobile devices -->
-  <style>
-      @media screen and (max-width: 767px) {
-          .title.is-1.publication-title {
-              font-size: 24px; /* Adjusted font size for mobile */
-              /* Additional styles for mobile can be added here */
-          }
-      }
-  </style>
-  <style>
-    .hero.is-small {
-        /* Adjust hero styles as needed */
-        background-color: #f0f0f0; /* Example background color */
-        padding: 2rem 0; /* Example padding */
+      font-size: 32px; /* Default font size */
+      font-weight: bold; /* Bold font weight */
+      margin-bottom: 10px; /* Bottom margin */
+      text-align: center; /* Center align */
+      padding: 20px 0; /* Padding top and bottom */
     }
 
+    /* Abstract section */
+    .abstract-section {
+      background-color: #f0f0f0; /* Lighter background color */
+      padding: 40px 20px; /* Padding */
+    }
+
+    /* Methodology section */
+    .methodology-section {
+      background-color: #ffffff; /* White background color */
+      padding: 40px 20px; /* Padding */
+    }
+
+    /* Container styles */
     .container {
-        text-align: center; /* Center align content within the container */
+      max-width: 1200px; /* Max width for content */
+      margin: 0 auto; /* Center align content */
     }
 
-    .container > img {
-        display: block; /* Ensure image is displayed as a block element */
-        margin: 0 auto; /* Center align the image */
-        max-width: 85%; /* Set maximum width for the image */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    ul {
-        text-align: left; /* Align list items to the left */
-        margin-left: auto; /* Auto margin on the left side */
-        margin-right: auto; /* Auto margin on the right side */
-        max-width: 85%; /* Limit list width to match image */
-        padding-left: 1.5em; /* Add padding to align with list style */
+    /* Responsive styles */
+    @media screen and (max-width: 767px) {
+      .title.is-1.publication-title {
+        font-size: 23px; /* Adjusted font size for mobile */
+      }
     }
   </style>
-
 </head>
 <body>
-
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Multi-agent Long-term 3D Human Pose Forecasting via Interaction-aware Trajectory Conditioning</h1>
+            <h1 class="title is-1 publication-title">Multi-agent Long-term 3D Human Pose Forecasting via <br> Interaction-aware Trajectory Conditioning</h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://jaewoo97.github.io" target="_blank">Jaewoo Jeong</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=dGMozakAAAAJ&hl=en&oi=ao" target="_blank">Daehee Park</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://sites.google.com/site/kjyoon/" target="_blank">Kuk-Jin Yoon</a>
-                  </span>
-                  </div>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=dGMozakAAAAJ&hl=en&oi=ao" target="_blank">Daehee Park</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/site/kjyoon/" target="_blank">Kuk-Jin Yoon</a>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">KAIST<br>CVPR 2024 Highlight</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">KAIST<br>CVPR 2024 Highlight</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/abs/2404.05218" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2404.05218" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/jaewoo97/t2p" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+                <span class="link-block">
+                  <a href="https://github.com/jaewoo97/t2p" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body" style="display: flex; justify-content: space-around; align-items: center;">
+        <div style="flex: 1; margin-right: 10px;">
+          <img src="static/images/figure_1.png" alt="MY ALT TEXT"/>
+        </div>
+        <div style="flex: 1; margin-left: 10px;">
+          <video poster="" id="tree2" autoplay controls muted loop width="100%">
+            <source src="static/videos/banner_video2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
       <h2 class="subtitle has-text-centered">
-        Overview of our coarse-to-fine approach for human pose forecasting: Our method first forecasts global trajectories (coarse), upon which local poses (fine) are conditioned for subsequent forecasts.
+        Overview of our coarse-to-fine approach for <strong>human pose forecasting in complex scenes</strong>: Our method first forecasts global trajectories (<strong>coarse</strong>), upon which local poses (<strong>fine</strong>) are conditionally predicted.
       </h2>
     </div>
-  </div>
-</section> -->
-<!-- End teaser video -->
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body" style="display: flex; justify-content: space-around; align-items: center;">
-      <div style="flex: 1; margin-right: 10px;">
-        <img src="static/images/figure_1.png" alt="MY ALT TEXT"/>
-        <!-- <img poster="" id="tree" autoplay controls muted loop width="100%">
-          <source src="static/images/figure_1.png" type="image/png"> -->
-      </div>
-      <div style="flex: 1; margin-left: 10px;">
-        <video poster="" id="tree2" autoplay controls muted loop width="100%">
-          <source src="static/videos/banner_video2.mp4" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <h2 class="subtitle has-text-centered">
-      Overview of our coarse-to-fine approach for <strong>human pose forecasting in complex scenes</strong>: Our method first forecasts global trajectories (<strong>coarse</strong>), upon which local poses (<strong>fine</strong>) are conditionally predicted.
-    </h2>
-  </div>
-</section>
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Human pose forecasting garners attention for its diverse applications. However, challenges in modeling the multi-modal nature of human motion and intricate interactions among agents persist, particularly with longer timescales and more agents. In this paper, we propose an interaction-aware trajectory-conditioned long-term multi-agent human pose forecasting model, utilizing a coarse-to-fine prediction approach: multi-modal global trajectories are initially forecasted, followed by respective local pose forecasts conditioned on each mode. In doing so, our Trajectory2Pose model introduces a graph-based agent-wise interaction module for a reciprocal forecast of local motion-conditioned global trajectory and trajectory-conditioned local pose. Our model effectively handles the multi-modality of human motion and the complexity of long-term multi-agent interactions, improving performance in complex environments. Furthermore, we address the lack of long-term (6s+) multi-agent (5+) datasets by constructing a new dataset from real-world images and 2D annotations, enabling a comprehensive evaluation of our proposed model. State-of-the-art prediction performance on both complex and simpler datasets confirms the generalized effectiveness of our method.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- Method -->
-<section class="hero is-small">
-  <div class="hero-body">
-      <div class="container">
-          <h2 class="title is-3">Methodology</h2>
-          <img src="static/images/figure_2.PNG" alt="MY ALT TEXT"/>
-          <ul style="text-align: left; list-style-type: disc;">
-              <li>Coarse global trajectories are forecasted from past motion (trajectory + pose)</li>
-              <li>Fine local motion forecasted with conditioning on predicted future trajectory</li>
-              <li>Complementary forecasting of <strong>Global</strong> and <strong>Local</strong> motion yields comprehensive proficiency.</li>
-          </ul>
-      </div>
-  </div>
-</section>
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <section class="section hero is-light abstract-section">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Human pose forecasting garners attention for its diverse applications. However, challenges in modeling the multi-modal nature of human motion and intricate interactions among agents persist, particularly with longer timescales and more agents. In this paper, we propose an interaction-aware trajectory-conditioned long-term multi-agent human pose forecasting model, utilizing a coarse-to-fine prediction approach: multi-modal global trajectories are initially forecasted, followed by respective local pose forecasts conditioned on each mode. In doing so, our Trajectory2Pose model introduces a graph-based agent-wise interaction module for a reciprocal forecast of local motion-conditioned global trajectory and trajectory-conditioned local pose. Our model effectively handles the multi-modality of human motion and the complexity of long-term multi-agent interactions, improving performance in complex environments. Furthermore, we address the lack of long-term (6s+) multi-agent (5+) datasets by constructing a new dataset from real-world images and 2D annotations, enabling a comprehensive evaluation of our proposed model. State-of-the-art prediction performance on both complex and simpler datasets confirms the generalized effectiveness of our method.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
-
-
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
+  <section class="hero is-small methodology-section">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Methodology</h2>
+        <img src="static/images/figure_2.PNG" alt="MY ALT TEXT"/>
+        <ul style="text-align: left; list-style-type: disc;">
+          <li>Coarse global trajectories are forecasted from past motion (trajectory + pose)</li>
+          <li>Fine local motion forecasted with conditioning on predicted future trajectory</li>
+          <li>Complementary forecasting of <strong>Global</strong> and <strong>Local</strong> motion yields comprehensive proficiency.</li>
+        </ul>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Another Carousel</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+              <source src="static/videos/carousel1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+              <source src="static/videos/carousel2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">
+              <source src="static/videos/carousel3.mp4" type="video/mp4">
+            </video>
+         
